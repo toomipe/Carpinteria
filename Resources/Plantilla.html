@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Presupuesto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .membrete {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .logo img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 350px; /* Ajusta el ancho */
+            height: auto; /* Mantiene la proporción original */
+        }
+
+        .empresa-info {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .presupuesto-info {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- Membrete -->
+    <div class="membrete">
+        <div class="logo">
+            <center></center><img src="@rutaLogo" alt="Texto alternativo"/><center/>
+        </div>
+    </div>
+
+    <!-- Información de la empresa -->
+    <div class="empresa-info">
+        <p><strong>Carpinteria PADI</strong></p>
+        <p>Dirección: Fco del Prado 3842</p>
+        <p>Barrio: General Mosconi</p>
+        <p>Teléfono: 3516784672</p>
+        <p>Correo: carpinteriapadilla.cba@gmail.com</p>
+    </div>
+
+    <!-- Información del presupuesto -->
+    <div class="presupuesto-info">
+        <p><strong>Fecha:</strong> <span>@fechaActual</span></p>
+        <p><strong>Cliente:</strong> <span>@nombreCliente</span></p>
+        <p><strong>Detalle:</strong> <span>@nombrePresupuesto</span></p>
+    </div>
+
+    <!-- Detalles del presupuesto -->
+    <table border="1" cellspacing="0" cellpadding="5">
+        <thead>
+            <tr>
+                <th>Cantidad</th>
+                <th>Descripción</th>
+                <th>Precio Unitario</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            @tabla
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" style="text-align: right;"><strong>Total:</strong></td>
+                <td>@total</td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- Pie de página -->
+    <div class="footer">
+        <p>Gracias por su confianza. Para más información, no dude en ponerse en contacto con nosotros.</p>
+    </div>
+</body>
+</html>
